@@ -1,0 +1,11 @@
+div.mydialog{
+    background-color: azure;
+
+}
+div.mydialog:hover{
+    background-color: aquamarine;
+}
+textarea {
+    background-color: navy;
+    resize: none;
+}
