@@ -12,8 +12,8 @@ import java.io.IOException;
 /**
  * Created by Andrey on 09.11.2016.
  */
-@WebFilter(filterName = "loggedInFilter", urlPatterns = {/*"/register", "/register.jsp", "/login", "/login.jsp",*/
-        "/messages", "/dialogs", "/messages.jsp", "/dialogs.jsp", "/newPost", "/newPost.jsp"})
+@WebFilter(filterName = "loggedInFilter", urlPatterns = {"/register", "/register.jsp", "/login", "/login.jsp",
+        "/messages", "/dialogs", "/messages.jsp", "/dialogs.jsp", "/newPost"})
 public class LoggedFilter implements Filter {
 
 
@@ -27,11 +27,10 @@ public class LoggedFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         if (((HttpServletRequest) request).getSession().getAttribute("user") == null) {
-//            chain.doFilter(request, response);
-            ((HttpServletRequest) request).getServletContext().getRequestDispatcher("/").forward(httpRequest, httpResponse);
-        } else {
-//            ((HttpServletRequest) request).getServletContext().getRequestDispatcher("/index.jsp").forward(httpRequest, httpResponse);
-        }
+//            ((HttpServletResponse) response).sendRedirect("/vazilon/");
+            chain.doFilter(request, response);
+        }else
+        ((HttpServletRequest) request).getServletContext().getRequestDispatcher("/vazilon/").forward(httpRequest, httpResponse);
     }
 
     @Override

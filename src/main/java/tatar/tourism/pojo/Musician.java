@@ -7,6 +7,7 @@ public class Musician extends User {
 
     public Musician() {
         super(null, null);
+        setRole(UserTypes.MUSICIAN.toString());
     }
 
     public Musician (String firstname, String lastname){

@@ -1,5 +1,7 @@
 package tatar.tourism.dao;
 
+import org.apache.log4j.Logger;
+import sun.rmi.runtime.Log;
 import tatar.tourism.pojo.Musician;
 import tatar.tourism.pojo.User;
 import tatar.tourism.pojo.UserTypes;
@@ -16,6 +18,8 @@ import java.util.List;
  * Created by Andrey on 27.10.2016.
  */
 public class MySQLUserDao extends MySQLDaoFactory implements UserDao {
+
+    Logger lg = Logger.getLogger(MySQLUserDao.class);
     @Override
     public void create(User user) throws SQLException {
         PreparedStatement stmt = null;
@@ -71,6 +75,7 @@ public class MySQLUserDao extends MySQLDaoFactory implements UserDao {
             stmt.setString(2, user.getPassword());
             stmt.setString(3, user.getEmail());
             stmt.setString(4, user.getRole());
+            lg.info(user.getRole());
             stmt.setString(5, user.getFirstname());
             stmt.setString(6, user.getLastname());
             stmt.setBoolean(7, user.isActive());

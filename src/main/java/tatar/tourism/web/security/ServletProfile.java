@@ -35,11 +35,13 @@ public class ServletProfile extends HttpServlet {
             user.setEmail(currentUser.getEmail());
             user.setFirstname(currentUser.getFirstname());
             user.setLastname(currentUser.getLastname());
+            user.setDatabaseId(((User) request.getSession().getAttribute("user")).getDatabaseId());
         }
         else
             user = (User) request.getSession().getAttribute("user");
         try {
             user.setPassword(request.getParameter("password"));
+            lg.info(user.getPassword());
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
@@ -54,6 +56,8 @@ public class ServletProfile extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if(request.getSession().getAttribute("user") == null)
+            response.sendRedirect("/vazilon/");
         getServletContext().getRequestDispatcher("/profile.jsp").forward(request, response);
         lg.info("get");
     }
