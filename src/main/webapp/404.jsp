@@ -60,19 +60,6 @@
                     <li class="active"><a href="#" class="navbar-brand">Music forum</a></li>
                 </ul>
             </div>
-            <!--</div>-->
-
-            <!--<div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">1</span>
-                    <span class="icon-bar">2</span>
-                    <span class="icon-bar">3</span>
-                </button>
-
-            </div>-->
-            <!--<div id="navbar" class="navbar-collapse collapse">-->
 
             <c:if test="${user!=null}">
                 <a class="navbar-brand navbar-right"> ${user.firstname} ${user.lastname}</a>
@@ -102,11 +89,9 @@
         </div>
     </div>
 </nav>
-
-or call to action -->
 <div class="jumbotron">
     <div class="container">
-        404 page not fount
+        404 page not found
 
 
     </div>

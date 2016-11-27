@@ -14,7 +14,6 @@
     <form action="newPost" method=post id="message" class="form-control-static">
         <input type="text" name="header" id="header" class="form-control" placeholder="Заголовок" style="font-size: large"><br>
             <textarea name="comment" class="form-control" rows="20" cols="250" id="comment" placeholder="Текст" style="font-size: large"></textarea><br>
-        <input type="text" name="tags" required id="tags" class="form-control" placeholder="Теги, через пробел" style="font-size: large"><br>
         <div class="row">
             <div class="col-md-6 col-sm-10 col-xs-12">
                 <input type="submit" value="Готово" class="btn btn-lg btn-primary btn-block">

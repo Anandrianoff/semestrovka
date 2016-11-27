@@ -47,7 +47,7 @@
         <div class="container-fluid">
             <div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="" class="navbar-brand">Music forum</a></li>
+                    <li class="active"><a href="/vazilon/" class="navbar-brand">Music forum</a></li>
 
 
                 </ul>
@@ -55,7 +55,7 @@
             <c:if test="${user==null}">
                 <form class="navbar-form navbar-right" action="login" method=post>
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control" name="j_username" size="25">
+                        <input type="text" placeholder="Login" class="form-control" name="j_username" size="25">
                     </div>
                     <div class="form-group">
                         <input type="password" placeholder="Password" class="form-control" size="15"
