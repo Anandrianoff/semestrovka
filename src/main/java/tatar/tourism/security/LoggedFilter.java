@@ -13,7 +13,7 @@ import java.io.IOException;
  * Created by Andrey on 09.11.2016.
  */
 @WebFilter(filterName = "loggedInFilter", urlPatterns = {"/register", "/register.jsp", "/login", "/login.jsp",
-        "/messages", "/dialogs", "/messages.jsp", "/dialogs.jsp", "/newPost"})
+        "/messages", "/dialogs", "/messages.jsp", "/dialogs.jsp"})
 public class LoggedFilter implements Filter {
 
 
